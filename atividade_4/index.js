@@ -6,93 +6,52 @@ let rs = require("readline-sync")
 
 let nome = rs.question("Qual o seu nome?\n")
 
-let mes = rs.question("Qual mes voce nasceu?(usar numeros) \n")
+let mes = rs.questionInt("Qual mes voce nasceu?(usar numeros)\n")
 
-let dia = rs.question("Qual o dia em que voce nasceu?\n")
+let dia = rs.questionInt("Qual o dia em que voce nasceu?\n")
 
 console.log("============================================")
-if (mes == 1){
-    if (dia <= 20){
-    console.log(nome+", seu signo é Capricornio")
-    } else {
-    console.log(nome+", seu signo é Aquario")
-    }
-}    
-else if (mes == 2){
-    if (dia <= 18){
-    console.log(nome+", seu signo é Aquario")
-    } else {
-    console.log(nome+", seu signo é Peixes")
-    }
+
+switch (mes) {
+    case 1: 
+        dia >= 21 ? console.log(nome + ", seu signo é Aquario") : console.log(nome + ", seu signo é Capricornio");
+    break;
+    case 2:
+        dia >= 19 ? console.log(nome + ", seu signo é Peixes") : console.log(nome + ", seu signo é Aquario");
+    break;
+    case 3: 
+        dia >= 21 ? console.log(nome + ", seu signo é Aries") : console.log(nome + ", seu signo é Peixes");
+    break;    
+    case 4:
+        dia >= 21 ? console.log(nome + ", seu signo é Touro") : console.log(nome + ", seu signo é Aries");
+    break;
+    case 5: 
+        dia >= 21 ? console.log(nome + ", seu signo é Gemeos") : console.log(nome + ", seu signo é Touro");
+    break;    
+    case 6:
+        dia >= 21 ? console.log(nome + ", seu signo é Cancer") : console.log(nome + ", seu signo é Gemeos");
+    break;
+    case 7: 
+        dia >= 23 ? console.log(nome + ", seu signo é Leao") : console.log(nome + ", seu signo é Cancer");
+    break;   
+    case 8:
+        dia >= 23 ? console.log(nome + ", seu signo é Virgem") : console.log(nome + ", seu signo é Leao");
+    break;
+    case 9: 
+        dia >= 23 ? console.log(nome + ", seu signo é Libra") : console.log(nome + ", seu signo é Virgem");
+    break    
+    case 10:
+        dia >= 23 ? console.log(nome + ", seu signo é Escorpiao") : console.log(nome + ", seu signo é Libra");
+    break;
+    case 11: 
+        dia >= 22 ? console.log(nome + ", seu signo é Sagitario") : console.log(nome + ", seu signo é Escorpiao");
+    break;    
+    case 12:
+        dia >= 22 ? console.log(nome + ", seu signo é Capricornio") : console.log(nome + ", seu signo é Sagitario");
+    break;
+    default:
+        console.log(nome + ", a data não corresponde a nenhum signo")
+    break;
 }
-else if (mes == 3){
-    if (dia <= 20){
-    console.log(nome+", seu signo é Peixes")
-    } else {
-    console.log(nome+", seu signo é Aries")
-    }
-}
-else if (mes == 4){
-    if (dia <= 20){
-    console.log(nome+", seu signo é Aries")
-    } else {
-    console.log(nome+", seu signo é Touro")
-    }
-}
-else if (mes == 5){
-    if (dia <= 20){
-    console.log(nome+", seu signo é Touro")
-    } else {
-    console.log(nome+", seu signo é Gemeos")
-    }
-}
-else if (mes == 6){
-    if (dia <= 20){
-    console.log(nome+", seu signo é Gemeos")
-    } else {
-    console.log(nome+", seu signo é Cancer")
-    }
-}
-else if (mes == 7){
-    if (dia <= 22){
-    console.log(nome+", seu signo é Cancer")
-    } else {
-    console.log(nome+", seu signo é Leao")
-    }
-}
-else if (mes == 8){
-    if (dia <= 22){
-    console.log(nome+", seu signo é Leao")
-    } else {
-    console.log(nome+", seu signo é Virgem")
-    }
-}
-else if (mes == 9){
-    if (dia <= 22){
-    console.log(nome+", seu signo é Virgem")
-    } else {
-    console.log(nome+", seu signo é Libra")
-    }
-}
-else if (mes == 10){
-    if (dia <= 22){
-    console.log(nome+", seu signo é Libra")
-    } else {
-    console.log(nome+", seu signo é Escorpiao")
-    }
-}
-else if (mes == 11){
-    if (dia <= 21){
-    console.log(nome+", seu signo é Escorpiao")
-    } else {
-    console.log(nome+", seu signo é Sagitario")
-    }
-}
-else if (mes == 12){
-    if (dia <= 21){
-    console.log(nome+", seu signo é Sagitario")
-    } else {
-    console.log(nome+", seu signo é Capricornio")
-    }
-}
-console.log("============================================")
+
+        console.log("============================================\n")
