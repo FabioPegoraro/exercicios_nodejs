@@ -11,6 +11,7 @@ let mes = rs.questionInt("Qual mes voce nasceu?(usar numeros)\n")
 let dia = rs.questionInt("Qual o dia em que voce nasceu?\n")
 
 console.log("============================================")
+console.log("============================================")
 
 switch (mes) {
     case 1: 
@@ -54,4 +55,5 @@ switch (mes) {
     break;
 }
 
-        console.log("============================================\n")
+    console.log("============================================")
+    console.log("============================================\n")
